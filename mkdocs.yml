@@ -1,0 +1,26 @@
+site_name: AWS SOP 手冊
+site_description: 以 Markdown 撰寫的 AWS 操作手冊與標準流程
+site_url: https://example.com
+repo_url: https://github.com/yourname/aws-sop
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.sections
+    - content.code.copy
+    - search.suggest
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.highlight
+nav:
+  - 首頁: index.md
+  - 操作手冊:
+    - RDS 備份: rds-backup.md
+    - EC2 維護: ec2-maintenance.md
+    - VPC 建立: vpc-setup.md
