@@ -38,3 +38,4 @@ nav:
       - DR Runbook: 05-dr/dr-runbook.md
   - 參考 / 模板:
       - SOP 通用模板: _templates/sop-template.md
+  - 操作手冊: 操作手冊.md
