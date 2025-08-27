@@ -1,12 +1,25 @@
-# AWS SOP 手冊
+---
+service: RDS
+env: prod
+risk: medium
+owner: ops-team
+last_review: 2025-08-28
+---
 
-> 用最簡單的方式把 SOP 收斂成一個好找、好讀、可追蹤版本的網站。
+# 任務名稱（簡要）
 
-## 使用方式
-- 左側選單瀏覽各類 SOP。
-- 依 SOP 章節：**前置檢查 → 操作步驟 → 驗證/回滾 → 記錄**。
-- 每次修改請經由 Pull Request，確保**審核**與**追蹤差異**。
+## 1. 前置檢查
+- [ ] 權限/維護窗/標籤…
 
-::: tip
-建議：把能自動化的步驟逐步轉成 **AWS Systems Manager (SSM) Automation Runbooks**，在 SOP 內提供連結。
-:::
+## 2. 操作步驟
+1. …
+2. …
+
+## 3. 驗證
+- [ ] …
+
+## 4. 回滾
+- …
+
+## 5. 記錄
+- 變更單 / 執行人 / 連結（CloudTrail、SSM）
