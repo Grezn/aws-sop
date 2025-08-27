@@ -18,7 +18,7 @@
     
     
       
-        <title>S3 lifecycle archive - AWS SOP 手冊</title>
+        <title>S3 生命週期與封存 SOP - AWS SOP 手冊</title>
       
     
     
@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#s3-sop" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -91,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              S3 lifecycle archive
+              S3 生命週期與封存 SOP
             
           </span>
         </div>
@@ -537,6 +542,52 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 前置檢查
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 設定封存規則
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 驗證
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 回滾
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -555,9 +606,34 @@
   
 
 
-  <h1>S3 lifecycle archive</h1>
-
-
+<h1 id="s3-sop">S3 生命週期與封存 SOP<a class="headerlink" href="#s3-sop" title="Permanent link">&para;</a></h1>
+<h2 id="1">1. 前置檢查<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] 確認桶名稱與 Region</li>
+<li>[ ] 驗證 IAM 權限：<code>s3:PutLifecycleConfiguration</code></li>
+<li>[ ] 與業務部門確認封存週期（例如：30 天 → IA，90 天 → Glacier）</li>
+</ul>
+<h2 id="2">2. 設定封存規則<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>登入 AWS Console → S3 → 選擇 Bucket</li>
+<li>選單 → Management → Lifecycle rules → Create rule</li>
+<li>命名：<code>archive-rule-YYYYMMDD</code></li>
+<li>條件：所有物件或指定 prefix</li>
+<li>動作：</li>
+<li>30 天 → 移至 <strong>S3 Standard-IA</strong></li>
+<li>90 天 → 移至 <strong>Glacier Flexible Retrieval</strong></li>
+</ol>
+<h2 id="3">3. 驗證<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] 上傳測試檔案</li>
+<li>[ ] 手動調整日期（模擬檔案存放天數）</li>
+<li>[ ] 確認自動轉換 Storage Class 成功</li>
+</ul>
+<h2 id="4">4. 回滾<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>刪除 Lifecycle 規則</li>
+<li>驗證 Bucket 回到預設行為</li>
+</ul>
 
 
 

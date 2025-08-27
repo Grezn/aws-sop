@@ -18,7 +18,7 @@
     
     
       
-        <title>Rds backup restore - AWS SOP 手冊</title>
+        <title>RDS 備份與還原 SOP - AWS SOP 手冊</title>
       
     
     
@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#rds-sop" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -91,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Rds backup restore
+              RDS 備份與還原 SOP
             
           </span>
         </div>
@@ -537,6 +542,61 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 前置檢查
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 建立備份
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 還原備份
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 驗證
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 回滾
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -555,9 +615,38 @@
   
 
 
-  <h1>Rds backup restore</h1>
-
-
+<h1 id="rds-sop">RDS 備份與還原 SOP<a class="headerlink" href="#rds-sop" title="Permanent link">&para;</a></h1>
+<h2 id="1">1. 前置檢查<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] 確認 IAM 權限（至少具備 <code>rds:CreateDBSnapshot</code> 與 <code>rds:RestoreDBInstanceFromDBSnapshot</code>）</li>
+<li>[ ] 確認目標 RDS 狀態為 <code>available</code></li>
+<li>[ ] 驗證備份儲存區域（快照是否在正確 Region）</li>
+</ul>
+<h2 id="2">2. 建立備份<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>登入 AWS Console → RDS → Snapshots</li>
+<li>選擇目標資料庫，點擊「Take Snapshot」</li>
+<li>命名：<code>rds-&lt;db-name&gt;-backup-YYYYMMDD</code></li>
+</ol>
+<h2 id="3">3. 還原備份<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<ol>
+<li>RDS → Snapshots → 選擇快照</li>
+<li>點擊「Restore Snapshot」</li>
+<li>指定新 DB Instance ID（避免覆蓋原本）</li>
+<li>選擇 VPC / Subnet / Security Group</li>
+<li>建立後確認狀態為 <code>available</code></li>
+</ol>
+<h2 id="4">4. 驗證<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] 登入新還原的 RDS 測試環境</li>
+<li>[ ] 驗證資料一致性（抽樣查詢）</li>
+<li>[ ] CloudWatch Logs 是否正常</li>
+</ul>
+<h2 id="5">5. 回滾<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<ul>
+<li>若還原失敗，刪除該快照並重試</li>
+<li>通知 DBA 團隊進行人工檢查</li>
+</ul>
 
 
 

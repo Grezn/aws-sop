@@ -18,7 +18,7 @@
     
     
       
-        <title>Nlb alb guideline - AWS SOP 手冊</title>
+        <title>ALB / NLB 建立與設定指南 - AWS SOP 手冊</title>
       
     
     
@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#alb-nlb" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -91,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Nlb alb guideline
+              ALB / NLB 建立與設定指南
             
           </span>
         </div>
@@ -537,6 +542,61 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 前置檢查
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-alb" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 建立 ALB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-nlb" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 建立 NLB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 驗證
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 回滾
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -555,9 +615,42 @@
   
 
 
-  <h1>Nlb alb guideline</h1>
-
-
+<h1 id="alb-nlb">ALB / NLB 建立與設定指南<a class="headerlink" href="#alb-nlb" title="Permanent link">&para;</a></h1>
+<h2 id="1">1. 前置檢查<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] 確認流量需求（L4 or L7）</li>
+<li>[ ] 確認目標 VPC / Subnet</li>
+<li>[ ] 準備好 Target Group（EC2 / ECS / Lambda）</li>
+</ul>
+<h2 id="2-alb">2. 建立 ALB<a class="headerlink" href="#2-alb" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Console → EC2 → Load Balancers → Create Load Balancer</li>
+<li>選 Application Load Balancer</li>
+<li>配置：</li>
+<li>Scheme: Internet-facing / Internal</li>
+<li>Listener: HTTP 80 / HTTPS 443</li>
+<li>Target group: <code>tg-&lt;service-name&gt;</code></li>
+</ol>
+<h2 id="3-nlb">3. 建立 NLB<a class="headerlink" href="#3-nlb" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Console → EC2 → Load Balancers → Create Load Balancer</li>
+<li>選 Network Load Balancer</li>
+<li>配置：</li>
+<li>Scheme: Internet-facing / Internal</li>
+<li>Protocol: TCP</li>
+<li>Target group: <code>tg-&lt;service-name&gt;</code></li>
+</ol>
+<h2 id="4">4. 驗證<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] <code>curl</code> 測試端點</li>
+<li>[ ] CloudWatch 指標：<code>HealthyHostCount</code> &gt; 0</li>
+<li>[ ] 確認 ACM 憑證（HTTPS）</li>
+</ul>
+<h2 id="5">5. 回滾<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<ul>
+<li>刪除 ALB / NLB</li>
+<li>移除 Target Group</li>
+</ul>
 
 
 
