@@ -10,9 +10,11 @@ theme:
     - navigation.top
     - content.code.copy
     - search.suggest
+    - toc.integrate
 
 plugins:
   - search
+  - mermaid2
 
 markdown_extensions:
   - admonition
@@ -25,11 +27,14 @@ markdown_extensions:
 
 nav:
   - 首頁: index.md
-  - 01 基礎 Foundation:
-      - 帳號與組織結構: 01-foundation/account-structure.md
-  - 02 安全 Security:
-      - IAM 基線: 02-security/iam-baseline.md
   - 03 網路 Network:
-      - VPC 標準: 03-network/vpc-standard.md
+      - ALB / NLB 指南: 03-network/nlb-alb-guideline.md
   - 04 維運 Operations:
       - EC2 維護 SOP: 04-operations/ec2-maintenance.md
+      - RDS 備份與還原: 04-operations/rds-backup-restore.md
+      - S3 生命週期與封存: 04-operations/s3-lifecycle-archive.md
+      - ASG 滾動更新: 04-operations/asg-rolling-update.md
+  - 05 備援與演練 DR:
+      - DR Runbook: 05-dr/dr-runbook.md
+  - 參考 / 模板:
+      - SOP 通用模板: _templates/sop-template.md
