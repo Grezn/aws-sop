@@ -1,6 +1,7 @@
 site_name: AWS SOP 手冊
-site_description: 以 Markdown 撰寫的 AWS 作業標準與可執行流程
+site_description: 以 Markdown 撰寫的 AWS 作業標準與流程
 repo_url: https://github.com/Grezn/aws-sop
+
 theme:
   name: material
   language: zh
@@ -9,8 +10,10 @@ theme:
     - navigation.top
     - content.code.copy
     - search.suggest
+
 plugins:
   - search
+
 markdown_extensions:
   - admonition
   - toc:
@@ -24,23 +27,9 @@ nav:
   - 首頁: index.md
   - 01 基礎 Foundation:
       - 帳號與組織結構: 01-foundation/account-structure.md
-      - 標籤規範: 01-foundation/tagging-standard.md
-      - 命名規範: 01-foundation/naming-convention.md
   - 02 安全 Security:
       - IAM 基線: 02-security/iam-baseline.md
-      - Security Groups 標準: 02-security/security-groups.md
-      - 金鑰與 KMS: 02-security/key-management-kms.md
   - 03 網路 Network:
       - VPC 標準: 03-network/vpc-standard.md
-      - 負載平衡指南: 03-network/nlb-alb-guideline.md
-      - 專線/站對站 VPN: 03-network/direct-connect-s2s.md
   - 04 維運 Operations:
-      - EC2 維護: 04-operations/ec2-maintenance.md
-      - RDS 備份/還原: 04-operations/rds-backup-restore.md
-      - S3 生命週期與封存: 04-operations/s3-lifecycle-archive.md
-  - 05 備援與演練 DR:
-      - DR 總體 Runbook: 05-dr/dr-runbook.md
-      - 跨區備份策略: 05-dr/cross-region-backup.md
-  - 參考:
-      - 名詞表: 99-references/glossary.md
-      - 連結彙整: 99-references/links.md
+      - EC2 維護 SOP: 04-operations/ec2-maintenance.md
