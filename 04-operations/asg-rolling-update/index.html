@@ -11,6 +11,10 @@
       
       
       
+        <link rel="prev" href="../s3-lifecycle-archive/">
+      
+      
+        <link rel="next" href="../../05-dr/dr-runbook/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Glossary - AWS SOP 手冊</title>
+        <title>ASG 滾動更新 - AWS SOP 手冊</title>
       
     
     
@@ -59,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#auto-scaling-group-sopec2" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -91,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Glossary
+              ASG 滾動更新
             
           </span>
         </div>
@@ -181,7 +190,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="AWS SOP 手冊" class="md-nav__button md-logo" aria-label="AWS SOP 手冊" data-md-component="logo">
       
@@ -256,7 +267,7 @@
   
   
   <span class="md-ellipsis">
-    01 基礎 Foundation
+    03 網路 Network
     
   </span>
   
@@ -267,7 +278,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            01 基礎 Foundation
+            03 網路 Network
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -278,12 +289,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-foundation/account-structure/" class="md-nav__link">
+      <a href="../../03-network/nlb-alb-guideline/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    帳號與組織結構
+    ALB / NLB 指南
     
   </span>
   
@@ -305,8 +316,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -317,11 +330,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -329,7 +342,7 @@
   
   
   <span class="md-ellipsis">
-    02 安全 Security
+    04 維運 Operations
     
   </span>
   
@@ -337,10 +350,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            02 安全 Security
+            04 維運 Operations
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -351,17 +364,200 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02-security/iam-baseline/" class="md-nav__link">
+      <a href="../ec2-maintenance/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    IAM 基線
+    EC2 維護 SOP
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rds-backup-restore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RDS 備份與還原
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s3-lifecycle-archive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    S3 生命週期與封存
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ASG 滾動更新
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    ASG 滾動更新
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    <span class="md-ellipsis">
+      0. 參數
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 前置檢查
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-asg" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 調整 ASG 策略（可選）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 套用新版本
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 監控過程
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 驗證
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 回滾
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 記錄
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -402,7 +598,7 @@
   
   
   <span class="md-ellipsis">
-    03 網路 Network
+    05 備援與演練 DR
     
   </span>
   
@@ -413,7 +609,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            03 網路 Network
+            05 備援與演練 DR
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -424,12 +620,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-network/vpc-standard/" class="md-nav__link">
+      <a href="../../05-dr/dr-runbook/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    VPC 標準
+    DR Runbook
     
   </span>
   
@@ -475,7 +671,7 @@
   
   
   <span class="md-ellipsis">
-    04 維運 Operations
+    參考 / 模板
     
   </span>
   
@@ -486,7 +682,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            04 維運 Operations
+            參考 / 模板
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -497,12 +693,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-operations/ec2-maintenance/" class="md-nav__link">
+      <a href="../../_templates/sop-template/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    EC2 維護 SOP
+    SOP 通用模板
     
   </span>
   
@@ -527,22 +723,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -555,9 +735,57 @@
   
 
 
-  <h1>Glossary</h1>
-
-
+<h1 id="auto-scaling-group-sopec2">Auto Scaling Group 滾動更新 SOP（EC2）<a class="headerlink" href="#auto-scaling-group-sopec2" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>目標：對 ASG 逐批替換到新 AMI / 啟動組態，期間維持服務可用。</p>
+</blockquote>
+<h2 id="0">0. 參數<a class="headerlink" href="#0" title="Permanent link">&para;</a></h2>
+<ul>
+<li>ASG 名稱：<code>&lt;your-asg-name&gt;</code></li>
+<li>新 AMI/Launch Template 版本：<code>&lt;lt-xxx&gt;:&lt;version&gt;</code></li>
+<li>最小健康實例數（目標容量的 %）：例如 70%</li>
+</ul>
+<h2 id="1">1. 前置檢查<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] 新 AMI 已完成硬化與測試</li>
+<li>[ ] 新 Launch Template 已可啟動並通過健康檢查</li>
+<li>[ ] 負載均衡（ALB/NLB）健康檢查正常</li>
+<li>[ ] 維護窗公告完成</li>
+</ul>
+<h2 id="2-asg">2. 調整 ASG 策略（可選）<a class="headerlink" href="#2-asg" title="Permanent link">&para;</a></h2>
+<ul>
+<li>將 <code>Max</code> 容量臨時提高 +1～+N，以便滾動時有緩衝。</li>
+</ul>
+<h2 id="3">3. 套用新版本<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<ol>
+<li>更新 ASG 使用 <strong>新的 Launch Template 版本</strong>。</li>
+<li>啟用 <strong>Instance Refresh</strong>（建議）：</li>
+<li>Console → Auto Scaling groups → Instance refresh → Start instance refresh</li>
+<li>設定：批次換新比例（如 20%）、健康檢查寬限期（如 300s）</li>
+</ol>
+<h2 id="4">4. 監控過程<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>CloudWatch 指標：</li>
+<li><code>GroupInServiceInstances</code> 持續 ≥ 最小健康數</li>
+<li>應用延遲/錯誤率無異常</li>
+<li>觀察 ALB Target <code>HealthyHostCount</code>。</li>
+</ul>
+<h2 id="5">5. 驗證<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] 新實例版本正確（User data / 應用版本）</li>
+<li>[ ] 日誌/監控正常</li>
+<li>[ ] 流量平穩</li>
+</ul>
+<h2 id="6">6. 回滾<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<ul>
+<li>使用先前 Launch Template 版本重新觸發 Instance Refresh</li>
+<li>必要時調降 Max / Desired 至穩定值</li>
+</ul>
+<h2 id="7">7. 記錄<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<ul>
+<li>變更單 / 時間 / 影響評估</li>
+<li>產出物：新 AMI、LT 版本、Instance Refresh ID</li>
+</ul>
 
 
 
@@ -612,7 +840,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.top", "content.code.copy", "search.suggest"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.top", "content.code.copy", "search.suggest", "toc.integrate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>

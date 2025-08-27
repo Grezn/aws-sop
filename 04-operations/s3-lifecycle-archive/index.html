@@ -11,6 +11,10 @@
       
       
       
+        <link rel="prev" href="../rds-backup-restore/">
+      
+      
+        <link rel="next" href="../asg-rolling-update/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>S3 生命週期與封存 SOP - AWS SOP 手冊</title>
+        <title>S3 生命週期與封存 - AWS SOP 手冊</title>
       
     
     
@@ -96,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              S3 生命週期與封存 SOP
+              S3 生命週期與封存
             
           </span>
         </div>
@@ -186,7 +190,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="AWS SOP 手冊" class="md-nav__button md-logo" aria-label="AWS SOP 手冊" data-md-component="logo">
       
@@ -261,7 +267,7 @@
   
   
   <span class="md-ellipsis">
-    01 基礎 Foundation
+    03 網路 Network
     
   </span>
   
@@ -272,7 +278,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            01 基礎 Foundation
+            03 網路 Network
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -283,12 +289,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-foundation/account-structure/" class="md-nav__link">
+      <a href="../../03-network/nlb-alb-guideline/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    帳號與組織結構
+    ALB / NLB 指南
     
   </span>
   
@@ -310,8 +316,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -322,11 +330,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -334,7 +342,7 @@
   
   
   <span class="md-ellipsis">
-    02 安全 Security
+    04 維運 Operations
     
   </span>
   
@@ -342,10 +350,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            02 安全 Security
+            04 維運 Operations
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -356,12 +364,91 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02-security/iam-baseline/" class="md-nav__link">
+      <a href="../ec2-maintenance/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    IAM 基線
+    EC2 維護 SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rds-backup-restore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RDS 備份與還原
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    S3 生命週期與封存
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asg-rolling-update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ASG 滾動更新
     
   </span>
   
@@ -407,7 +494,7 @@
   
   
   <span class="md-ellipsis">
-    03 網路 Network
+    05 備援與演練 DR
     
   </span>
   
@@ -418,7 +505,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            03 網路 Network
+            05 備援與演練 DR
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -429,12 +516,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-network/vpc-standard/" class="md-nav__link">
+      <a href="../../05-dr/dr-runbook/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    VPC 標準
+    DR Runbook
     
   </span>
   
@@ -480,7 +567,7 @@
   
   
   <span class="md-ellipsis">
-    04 維運 Operations
+    參考 / 模板
     
   </span>
   
@@ -491,7 +578,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            04 維運 Operations
+            參考 / 模板
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -502,12 +589,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../ec2-maintenance/" class="md-nav__link">
+      <a href="../../_templates/sop-template/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    EC2 維護 SOP
+    SOP 通用模板
     
   </span>
   
@@ -532,68 +619,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 前置檢查
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 設定封存規則
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 驗證
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. 回滾
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -607,33 +632,7 @@
 
 
 <h1 id="s3-sop">S3 生命週期與封存 SOP<a class="headerlink" href="#s3-sop" title="Permanent link">&para;</a></h1>
-<h2 id="1">1. 前置檢查<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<ul>
-<li>[ ] 確認桶名稱與 Region</li>
-<li>[ ] 驗證 IAM 權限：<code>s3:PutLifecycleConfiguration</code></li>
-<li>[ ] 與業務部門確認封存週期（例如：30 天 → IA，90 天 → Glacier）</li>
-</ul>
-<h2 id="2">2. 設定封存規則<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<ol>
-<li>登入 AWS Console → S3 → 選擇 Bucket</li>
-<li>選單 → Management → Lifecycle rules → Create rule</li>
-<li>命名：<code>archive-rule-YYYYMMDD</code></li>
-<li>條件：所有物件或指定 prefix</li>
-<li>動作：</li>
-<li>30 天 → 移至 <strong>S3 Standard-IA</strong></li>
-<li>90 天 → 移至 <strong>Glacier Flexible Retrieval</strong></li>
-</ol>
-<h2 id="3">3. 驗證<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<ul>
-<li>[ ] 上傳測試檔案</li>
-<li>[ ] 手動調整日期（模擬檔案存放天數）</li>
-<li>[ ] 確認自動轉換 Storage Class 成功</li>
-</ul>
-<h2 id="4">4. 回滾<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<ul>
-<li>刪除 Lifecycle 規則</li>
-<li>驗證 Bucket 回到預設行為</li>
-</ul>
+<p>內容待補</p>
 
 
 
@@ -688,7 +687,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.top", "content.code.copy", "search.suggest"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.top", "content.code.copy", "search.suggest", "toc.integrate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>

@@ -181,7 +181,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="/." title="AWS SOP 手冊" class="md-nav__button md-logo" aria-label="AWS SOP 手冊" data-md-component="logo">
       
@@ -256,7 +258,7 @@
   
   
   <span class="md-ellipsis">
-    01 基礎 Foundation
+    03 網路 Network
     
   </span>
   
@@ -267,7 +269,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            01 基礎 Foundation
+            03 網路 Network
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -278,12 +280,12 @@
   
   
     <li class="md-nav__item">
-      <a href="/01-foundation/account-structure/" class="md-nav__link">
+      <a href="/03-network/nlb-alb-guideline/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    帳號與組織結構
+    ALB / NLB 指南
     
   </span>
   
@@ -329,7 +331,7 @@
   
   
   <span class="md-ellipsis">
-    02 安全 Security
+    04 維運 Operations
     
   </span>
   
@@ -340,7 +342,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            02 安全 Security
+            04 維運 Operations
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -351,12 +353,81 @@
   
   
     <li class="md-nav__item">
-      <a href="/02-security/iam-baseline/" class="md-nav__link">
+      <a href="/04-operations/ec2-maintenance/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    IAM 基線
+    EC2 維護 SOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/04-operations/rds-backup-restore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RDS 備份與還原
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/04-operations/s3-lifecycle-archive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    S3 生命週期與封存
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/04-operations/asg-rolling-update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ASG 滾動更新
     
   </span>
   
@@ -402,7 +473,7 @@
   
   
   <span class="md-ellipsis">
-    03 網路 Network
+    05 備援與演練 DR
     
   </span>
   
@@ -413,7 +484,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            03 網路 Network
+            05 備援與演練 DR
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -424,12 +495,12 @@
   
   
     <li class="md-nav__item">
-      <a href="/03-network/vpc-standard/" class="md-nav__link">
+      <a href="/05-dr/dr-runbook/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    VPC 標準
+    DR Runbook
     
   </span>
   
@@ -475,7 +546,7 @@
   
   
   <span class="md-ellipsis">
-    04 維運 Operations
+    參考 / 模板
     
   </span>
   
@@ -486,7 +557,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            04 維運 Operations
+            參考 / 模板
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -497,12 +568,12 @@
   
   
     <li class="md-nav__item">
-      <a href="/04-operations/ec2-maintenance/" class="md-nav__link">
+      <a href="/_templates/sop-template/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    EC2 維護 SOP
+    SOP 通用模板
     
   </span>
   
@@ -526,22 +597,6 @@
                 </div>
               </div>
             
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
             
           
           
@@ -591,7 +646,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": ["navigation.sections", "navigation.top", "content.code.copy", "search.suggest"], "search": "/assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "/", "features": ["navigation.sections", "navigation.top", "content.code.copy", "search.suggest", "toc.integrate"], "search": "/assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="/assets/javascripts/bundle.92b07e13.min.js"></script>
